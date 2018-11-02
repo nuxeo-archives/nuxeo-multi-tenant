@@ -25,7 +25,6 @@ import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.fail;
-import static org.junit.Assume.assumeTrue;
 import static org.nuxeo.ecm.multi.tenant.Constants.TENANTS_DIRECTORY;
 import static org.nuxeo.ecm.multi.tenant.Constants.TENANT_ADMINISTRATORS_PROPERTY;
 import static org.nuxeo.ecm.multi.tenant.Constants.TENANT_CONFIG_FACET;
@@ -42,7 +41,6 @@ import javax.security.auth.login.LoginContext;
 import javax.security.auth.login.LoginException;
 
 import org.junit.After;
-import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.nuxeo.ecm.core.api.CloseableCoreSession;
@@ -91,6 +89,7 @@ import junit.framework.Assert;
 @Deploy("org.nuxeo.ecm.default.config")
 @Deploy("org.nuxeo.ecm.platform.test:test-usermanagerimpl/userservice-config.xml")
 @Deploy("org.nuxeo.ecm.multi.tenant:multi-tenant-test-contrib.xml")
+@Deploy("org.nuxeo.ecm.multi.tenant:multi-tenant-login-config.xml")
 public class TestMultiTenantService {
 
     @Inject

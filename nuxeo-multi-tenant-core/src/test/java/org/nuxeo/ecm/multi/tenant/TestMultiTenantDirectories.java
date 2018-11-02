@@ -21,16 +21,14 @@ package org.nuxeo.ecm.multi.tenant;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.nuxeo.ecm.multi.tenant.Constants.POWER_USERS_GROUP;
 
-import javax.inject.Inject;
-import javax.security.auth.login.LoginContext;
-import javax.security.auth.login.LoginException;
-
-import java.security.Principal;
-import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
+import javax.inject.Inject;
+import javax.security.auth.login.LoginContext;
+import javax.security.auth.login.LoginException;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -62,6 +60,7 @@ import org.nuxeo.runtime.test.runner.FeaturesRunner;
 @Deploy("org.nuxeo.ecm.platform.userworkspace.core")
 @Deploy("org.nuxeo.ecm.multi.tenant")
 @Deploy("org.nuxeo.ecm.multi.tenant:multi-tenant-test-contrib.xml")
+@Deploy("org.nuxeo.ecm.multi.tenant:multi-tenant-login-config.xml")
 @Deploy("org.nuxeo.ecm.multi.tenant:multi-tenant-enabled-default-test-contrib.xml")
 @Deploy("org.nuxeo.ecm.multi.tenant:multi-tenant-test-directories-contrib.xml")
 @Deploy("org.nuxeo.ecm.platform.test:test-usermanagerimpl/userservice-config.xml")
